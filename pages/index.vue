@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row my-5 d-flex justify-content-between">
-      <div class="col-lg-5">
+      <div class="col-lg-5 mb-5">
         <nuxt-link to="/pengunjung/tambah" class="tbh text-decoration-none">
           <div class="card bg-pengunjung rounded-5">
             <div class="card-body d-flex justify-content-center align-items-center">

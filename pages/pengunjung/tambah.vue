@@ -7,10 +7,10 @@
         <h2 class="text-center my-4">ISI BUKU KUNJUNGAN</h2>
         <form>
           <div class="mb-3">
-            <input type="text" class="form-control form-control-lg rounded-5 bg-primary" placeholder="NAMA">
+            <input type="text" class="form-control form-control-lg rounded-3 bg-primary" placeholder="NAMA">
           </div>
           <div class="mb-3">
-            <select class="form-control form-control-lg form-select rounded-5 bg-primary">
+            <select class="form-control form-control-lg form-select rounded-3 bg-primary">
               <option value="">KEANGGOTAAN</option>
               <option value="Siswa">Siswa</option>
               <option value="Guru">Guru</option>
@@ -21,7 +21,7 @@
           <div class="mb-3">
             <div class="row">
               <div class="col-md-4">
-                <select class="form-control form-control-lg form-select rounded-5 mb-2 bg-primary">
+                <select class="form-control form-control-lg form-select rounded-3 mb-2 bg-primary">
                   <option value="">TINGKAT</option>
                   <option value="X">X</option>
                   <option value="XI">XI</option>
@@ -29,7 +29,7 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <select class="form-control form-control-lg form-select rounded-5 mb-2 bg-primary">
+                <select class="form-control form-control-lg form-select rounded-3 mb-2 bg-primary">
                   <option value="">JURUSAN</option>
                   <option value="PPLG">PPLG</option>
                   <option value="TJKT">TJKT</option>
@@ -39,7 +39,7 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <select class="form-control form-control-lg form-select rounded-5 mb-2 bg-primary">
+                <select class="form-control form-control-lg form-select rounded-3 mb-2 bg-primary">
                   <option value="">KELAS</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -50,16 +50,18 @@
             </div>
           </div>
           <div class="mb-3">
-            <select class="form-control form-control-lg form-select rounded-5 bg-primary">
+            <select class="form-control form-control-lg form-select rounded-3 bg-primary">
               <option value="">KEPERLUAN</option>
               <option value="baca">Baca Buku</option>
               <option value="pinjam">Pinjam Buku</option>
               <option value="kembalikan">Kembalikan Buku</option>
             </select>
           </div>
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-secondary btn-lg rounded-5 px-5 text-white">Kirim</button>
-          </div>
+          <nuxt-link to="/pengunjung/">
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-secondary btn-lg rounded-3 px-5 text-white krm">Kirim</button>
+            </div>
+          </nuxt-link>
         </form>
       </div>
     </div>
@@ -74,7 +76,7 @@
   width: 100px;
 }
 
-.bg-primary{
+.bg-primary {
   background-color: #D9D9D9 !important;
 }
 </style>

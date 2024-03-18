@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="row mt-4 d-flex justify-content-evenly">
-      <div class="col-lg-4">
+      <div class="col-lg-4 p-0">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body p-0">
             <img src="~/assets/img/cover1.jpg" width="220px" height="340px" class="cover" alt="cover1">
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-4 p-0">
         <p>Pengarang : Jonathan Black</p>
         <p>Genre : Sejarah</p>
         <p>Bahasa : Indonesia</p>
@@ -39,9 +39,14 @@
 .cover {
   width: 255px;
   height: 370px;
-  box-shadow: 1px 10px 50px rgb(0, 0, 0,.5);
+  box-shadow: 1px 10px 50px rgb(0, 0, 0, .5);
 }
-.card{
+
+.card {
   border: none !important;
+}
+
+.card-body {
+  width: auto;
 }
 </style>

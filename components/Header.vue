@@ -1,24 +1,27 @@
 <template>
-  <div class="row pt-2 pb-2 bg-primary text-black d-flex justify-content-center">
-    <div class="col-4 d-flex justify-content-end">
-      <img src="~/assets/img/logo.png" alt="logo" width="80" height="90">
+  <div class="row bg-primary text-black d-flex justify-content-center align-items-center height">
+    <div class="col-5 d-flex justify-content-end pr-2">
+      <img src="~/assets/img/logo.png" alt="logo" width="70">
     </div>
-    <div class="col-6">
-      <h1><u>PerpusDigital</u></h1>
-      <address>
+    <div class="col-6 p-0 m-0 ppp d-flex flex-column justify-content-center">
+      <h1 class="pd"><u>Perpus Digital</u></h1>
+      <address class="p-0 m-0">
         SMKN 4 Tasikmalaya
       </address>
     </div>
   </div>
 </template>
 
-<style >
-.logo {
-  width: 80%;
+<style>
+.ppp {
+  font-size: 17px;
 }
 
-.hede {
-  background-color: #4D6EE3;
+.height {
+  height: 100px;
 }
 
+.pd {
+  font-size: 1.5em;
+}
 </style>

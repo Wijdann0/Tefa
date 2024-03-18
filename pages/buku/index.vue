@@ -46,8 +46,6 @@
 
 <style scoped>
 .card-body {
-  width: 100%;
-  height: 20em;
   padding: 0;
 }
 
@@ -62,4 +60,7 @@ button {
   width: 100px;
 }
 
+img {
+  width: 100%;
+}
 </style>
