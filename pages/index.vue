@@ -34,6 +34,11 @@
   </div>
 </template>
 
+<script setup>
+const supabase = useSupabaseClient()
+console.log(supabase)
+</script>
+
 <style scoped>
 .card {
   height: 250px;

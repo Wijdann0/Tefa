@@ -4,33 +4,17 @@
       <div class="col-lg-12">
         <h2 class="text-center my-4">Cari Buku</h2>
         <div class="my-3">
-          <input type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini?">
+          <form @submit.prevent="getBooks">
+            <input v-model="keyword" type="search" class="form-control rounded-5" placeholder="Mau baca apa hari ini?">
+          </form>
         </div>
         <div class="my-3 text-muted">menampilkan 3 dari 3</div>
         <div class="row">
-          <div class="col-lg-2">
-            <nuxt-link to="/rincian/buku1">
+          <div v-for="(book, i) in books" :key="i" class="col-lg-2">
+            <nuxt-link :to="`/buku/${book.id}`">
               <div class="card mb-3">
                 <div class="card-body">
-                  <img src="~/assets/img/cover1.jpg" class="cover" alt="cover1">
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-2">
-            <nuxt-link to="/rincian/buku2">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <img src="~/assets/img/cover2.jpg" class="cover" alt="cover2">
-                </div>
-              </div>
-            </nuxt-link>
-          </div>
-          <div class="col-lg-2">
-            <nuxt-link to="/rincian/buku3">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <img src="~/assets/img/cover3.jpg" class="cover" alt="cover3">
+                  <h3>{{ book.judul }}</h3>
                 </div>
               </div>
             </nuxt-link>
@@ -64,3 +48,21 @@ img {
   width: 100%;
 }
 </style>
+
+
+<script setup>
+const supabase = useSupabaseClient()
+
+const books = ref([])
+const keyword = ref('')
+
+const getBooks = async () => {
+  const { data, error } = await supabase.from('Buku').select(`*, kategori(*)`)
+    .ilike(`judul`, `%${keyword.value}`)
+  if (data) books.value = data
+}
+
+onMounted(() => {
+  getBooks()
+})
+</script>
